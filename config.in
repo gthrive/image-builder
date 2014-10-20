@@ -5,7 +5,7 @@ RELEASES="wheezy jessie"
 
 # Using an apt proxy (like apt-cacher-ng) is HIGHLY recommended, as the
 # image build scripts cannot be (easily) pointed to a local repository
-apt_proxy=""
+apt_proxy="192.168.62.12:3142"
 
 # Output file generation
 # Files are generated, copied to the deploy/ directory, and tar'd

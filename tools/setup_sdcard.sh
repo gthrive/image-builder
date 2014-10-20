@@ -838,6 +838,7 @@ populate_rootfs () {
 		echo "##Example" >> ${wfile}
 		echo "#cape_disable=capemgr.disable_partno=" >> ${wfile}
 		echo "#cape_enable=capemgr.enable_partno=" >> ${wfile}
+		echo "cape_enable=capemgr.enable_partno=BB-UART2,BB-UART4" >> ${wfile}
 		echo "" >> ${wfile}
 	fi
 

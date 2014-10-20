@@ -664,6 +664,21 @@ cat > ${DIR}/chroot_script.sh <<-__EOF__
 			fi
 
 		fi
+		if [ ! "x${rfs_gthrive}" = "x" ] ; then
+
+			if [ -f /usr/bin/git ] ; then
+				mkdir -p /opt/scripts/ || true
+				qemu_command="git clone ${rfs_gthrive} /opt/gthrive/ --depth 1 || true"
+				qemu_warning
+				git clone ${rfs_gthrive} /opt/gthrive/ --depth 1 || true
+				sync
+				if [ -f /opt/scripts/.git/config ] ; then
+					echo "/opt/gthrive/ : ${rfs_gthrive}" >> /opt/source/list.txt
+					chown -R ${rfs_username}:${rfs_username} /opt/gthrive/
+				fi
+			fi
+
+		fi
 	}
 
 	cleanup () {
