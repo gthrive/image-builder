@@ -56,6 +56,11 @@ git_trees () {
 	git_clone_address="https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git"
 	generic_git
 	update_git
+	
+	#git_project_name="gnodes"
+	#git_clone_address="git@github.com:gthrive/gnodes.git"
+	#generic_git
+	#update_git
 }
 
 run_roostock_ng () {
